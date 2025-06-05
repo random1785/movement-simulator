@@ -1,0 +1,6 @@
+execute as @e[type=armor_stand,tag=centre,scores={bonus=1}] run tellraw @a [{"color":"gold","text":"you will be given "},{"color":"red","bold":true,"score":{"name":"@s","objective":"bonus"}},{"color":"gold","text":" bonus!"}]
+execute as @e[type=armor_stand,tag=centre,scores={bonus=2}] run tellraw @a [{"color":"gold","text":"you will be given "},{"color":"yellow","bold":true,"score":{"name":"@s","objective":"bonus"}},{"color":"gold","text":" bonuses!"}]
+execute as @e[type=armor_stand,tag=centre,scores={bonus=3}] run tellraw @a [{"color":"gold","text":"you will be given "},{"color":"green","bold":true,"score":{"name":"@s","objective":"bonus"}},{"color":"gold","text":" bonuses!"}]
+execute as @e[type=armor_stand,tag=centre,scores={bonus=4}] run tellraw @a [{"color":"gold","text":"you will be given "},{"color":"blue","bold":true,"score":{"name":"@s","objective":"bonus"}},{"color":"gold","text":" bonuses!"}]
+execute as @e[type=armor_stand,tag=centre,scores={bonus=0}] run tellraw @a [{"color":"red","text":"you will "},{"bold":true,"text":"NOT"},{"text":" be given a bonus :(."}]
+execute as @e[type=armor_stand,tag=centre,scores={bonus=1..}] run schedule function a:zbonus 30t
