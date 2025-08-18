@@ -15,3 +15,4 @@ execute as @a at @s run playsound minecraft:block.trial_spawner.ominous_activate
 title @a title {"text":"game starting!","color":"green"}
 schedule function a:zstart2 5t
 forceload remove all
+function a:zzzspawnpoint

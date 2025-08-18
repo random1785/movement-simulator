@@ -1,1 +1,1 @@
-give @p splash_potion[potion_contents={custom_effects:[{id:"minecraft:speed",amplifier:0,duration:1200,show_icon:1b}]},custom_name='{"italic":false,"text":"Splash Potion of Swiftness"}']
+give @a splash_potion[potion_contents={custom_effects:[{id:"minecraft:speed",amplifier:0,duration:1200,show_icon:1b}]},custom_name={"italic":false,"text":"Splash Potion of Swiftness"}]

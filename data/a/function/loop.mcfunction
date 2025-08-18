@@ -1,3 +1,15 @@
+execute positioned 12.79 308.35 0.70 run effect give @a[distance=..30] mining_fatigue 1 254 true
+execute positioned 12.79 308.35 0.70 run effect give @a[distance=..30] resistance 1 254 true
+execute positioned 22.41 309.99 0.39 run effect give @a[distance=..10] saturation 1 254 true
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run effect give @a[distance=..60] resistance 1 254 true
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run effect give @a[distance=..60] mining_fatigue 1 254 true
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run effect give @a[distance=..60] saturation 1 254 true
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run tp @e[type=enderman,distance=..60,tag=!end] ~ 0 ~
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run tag @e[type=enderman,distance=..60,tag=!end] add end
+
+
+
+
 scoreboard players add @a[scores={death=1}] score 1
 execute as @a[scores={death=2},tag=!b] run tellraw @a [{"color":"red","selector":"@s"},{"text":" died "},{"score":{"name":"@s","objective":"forward"}},{"text":" blocks out."}]
 gamemode spectator @a[scores={death=2},tag=!b]
