@@ -15,3 +15,4 @@ execute as @e[type=armor_stand,tag=centre,scores={random=2}] run scoreboard play
 execute as @e[type=armor_stand,tag=centre,scores={random=8}] run scoreboard players add @s bonus 1
 scoreboard players reset @e[type=armor_stand] random
 schedule function a:zstart5 60t
+tellraw @a {"text":"game loading... (4/5)","color":"gold"}

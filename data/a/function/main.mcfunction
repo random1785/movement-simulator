@@ -6,12 +6,16 @@ gamerule announceAdvancements false
 gamerule spawnRadius 2
 gamerule doDaylightCycle false
 gamerule doWeatherCycle false
+gamerule keepInventory true
 weather clear
 difficulty easy
 time set 0
 team add a
 scoreboard objectives add forward dummy
 scoreboard objectives add offset dummy
+scoreboard objectives add pforward dummy
+scoreboard objectives add poffset dummy
+scoreboard objectives add noffset dummy
 scoreboard objectives add random dummy
 scoreboard objectives add score dummy
 scoreboard objectives add negative dummy

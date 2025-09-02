@@ -100,5 +100,5 @@ execute as @e[type=armor_stand,tag=centre,scores={random=397}] run schedule func
 execute as @e[type=armor_stand,tag=centre,scores={random=398}] run schedule function a:zend 398s
 execute as @e[type=armor_stand,tag=centre,scores={random=399}] run schedule function a:zend 399s
 execute as @e[type=armor_stand,tag=centre,scores={random=400}] run schedule function a:zend 400s
-execute at @e[type=armor_stand,tag=starter] run tp @a ~ ~ ~
+execute at @e[type=armor_stand,tag=starter] run tp @a ~ ~ ~ 0 0
 kill @e[type=armor_stand,tag=starter]

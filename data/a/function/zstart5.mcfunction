@@ -1,5 +1,6 @@
 scoreboard players set @a score -250
 execute at @r run spreadplayers ~ ~ 1 10 true @a
+execute as @a at @s run tp @s ~ ~ ~ 0 0
 execute at @r run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["starter"]}
 effect give @a levitation 12 7 true
 execute store result score @e[type=armor_stand,tag=centre] random run random value 350..400
@@ -18,3 +19,4 @@ execute as @e[type=armor_stand,tag=centre] run scoreboard players operation @s s
 execute as @e[type=armor_stand,tag=centre] run scoreboard players operation @s speeddec /= @s random
 execute as @e[type=armor_stand,tag=centre] run tellraw @a [{"color":"red","text":"Worldborder speed: "},{"bold":true,"score":{"name":"@s","objective":"speed"}},{"bold":true,"text":"."},{"bold":true,"score":{"name":"@s","objective":"speeddec"}},{"text":" blocks per second."}]
 schedule function a:zstart6 250t
+tellraw @a {"text":"game has loaded! make sure to face SOUTH!","color":"red"}

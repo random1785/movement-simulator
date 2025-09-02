@@ -11,9 +11,8 @@ execute in minecraft:the_nether positioned 11.08 159.00 4.82 run tag @e[type=end
 
 
 scoreboard players add @a[scores={death=1}] score 1
-execute as @a[scores={death=2},tag=!b] run tellraw @a [{"color":"red","selector":"@s"},{"text":" died "},{"score":{"name":"@s","objective":"forward"}},{"text":" blocks out."}]
 gamemode spectator @a[scores={death=2},tag=!b]
-tag @a[scores={death=2},tag=!b] add b
+execute as @a[scores={death=2},tag=!b] run function a:zzzpy
 
 title @a[scores={score=-200}] title {"text":"10","color":"green"}
 title @a[scores={score=-180}] title {"text":"9","color":"green"}
@@ -46,5 +45,7 @@ execute as @a run scoreboard players operation @s forward *= @s negative
 execute as @e[type=minecraft:armor_stand] run execute store result score @s offset run data get entity @s Pos[0]
 execute as @a run execute store result score @s offset run data get entity @s Pos[0]
 execute as @a run scoreboard players operation @s offset -= @e[type=minecraft:armor_stand,tag=centre,limit=1] offset
-execute as @a[scores={offset=0..},tag=!a] run title @s actionbar [{"score":{"name":"@s","objective":"forward"}},{"text":"  ↑     "},{"score":{"name":"@s","objective":"offset"}},{"text":" →"}]
-execute as @a[scores={offset=..0}] run function a:zcorrection
+execute as @a run scoreboard players operation @s noffset = @s offset
+scoreboard players operation @a noffset *= @s negative
+execute as @a[scores={offset=0..}] run title @s actionbar [{"score":{"name":"@s","objective":"forward"}},{"text":"  ↑     "},{"score":{"name":"@s","objective":"offset"}},{"text":" →"}]
+execute as @a[scores={offset=..0}] run title @s actionbar [{"score":{"name":"@s","objective":"forward"}},{"text":"  ↑     "},{"score":{"name":"@s","objective":"offset"}},{"text":" ←"}]
