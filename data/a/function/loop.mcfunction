@@ -48,4 +48,4 @@ execute as @a run scoreboard players operation @s offset -= @e[type=minecraft:ar
 execute as @a run scoreboard players operation @s noffset = @s offset
 scoreboard players operation @a noffset *= @s negative
 execute as @a[scores={offset=0..}] run title @s actionbar [{"score":{"name":"@s","objective":"forward"}},{"text":"  ↑     "},{"score":{"name":"@s","objective":"offset"}},{"text":" →"}]
-execute as @a[scores={offset=..0}] run title @s actionbar [{"score":{"name":"@s","objective":"forward"}},{"text":"  ↑     "},{"score":{"name":"@s","objective":"offset"}},{"text":" ←"}]
+execute as @a[scores={offset=..0}] run title @s actionbar [{"score":{"name":"@s","objective":"forward"}},{"text":"  ↑     "},{"score":{"name":"@s","objective":"noffset"}},{"text":" ←"}]
