@@ -46,6 +46,10 @@ execute as @e[type=minecraft:armor_stand] run execute store result score @s offs
 execute as @a run execute store result score @s offset run data get entity @s Pos[0]
 execute as @a run scoreboard players operation @s offset -= @e[type=minecraft:armor_stand,tag=centre,limit=1] offset
 execute as @a run scoreboard players operation @s noffset = @s offset
-scoreboard players operation @a noffset *= @s negative
+execute as @a run scoreboard players operation @s noffset *= @s negative
 execute as @a[scores={offset=0..}] run title @s actionbar [{"score":{"name":"@s","objective":"forward"}},{"text":"  ↑     "},{"score":{"name":"@s","objective":"offset"}},{"text":" →"}]
 execute as @a[scores={offset=..0}] run title @s actionbar [{"score":{"name":"@s","objective":"forward"}},{"text":"  ↑     "},{"score":{"name":"@s","objective":"noffset"}},{"text":" ←"}]
+
+execute as @a[scores={score=..0,pearl=1..}] run kill @e[type=ender_pearl]
+execute as @a[scores={score=..0,pearl=1..}] run tellraw @s {"text":"DO NOT throw pearls during the countdown sequence!","color":"dark_red"}
+execute as @a[scores={pearl=1..}] run scoreboard players reset @s pearl
