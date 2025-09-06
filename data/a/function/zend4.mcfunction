@@ -1,0 +1,1 @@
+tellraw @a {"color":"light_purple","text":"Thanks for playing Movement Simulator! To start another game, first run /reload, then run /function a:start!"}

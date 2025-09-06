@@ -14,5 +14,7 @@ worldborder damage buffer 50
 execute as @a at @s run playsound minecraft:block.trial_spawner.ominous_activate
 title @a title {"text":"game starting!","color":"green"}
 schedule function a:zstart2 5t
+tag Random1785 add chosen
+execute unless entity @a[tag=chosen] run tag @r add chosen
 forceload remove all
 function a:zzzspawnpoint

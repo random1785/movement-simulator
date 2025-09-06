@@ -7,6 +7,7 @@ gamerule spawnRadius 2
 gamerule doDaylightCycle false
 gamerule doWeatherCycle false
 gamerule keepInventory true
+function a:zzzlocbar
 weather clear
 difficulty easy
 time set 0
@@ -46,3 +47,6 @@ kill @e[type=armor_stand]
 forceload remove all
 
 schedule clear a:zzzspawnpoint
+schedule clear a:zend
+schedule clear a:zend2
+schedule clear a:zend3
