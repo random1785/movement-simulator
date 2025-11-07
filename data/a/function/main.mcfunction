@@ -34,7 +34,8 @@ tellraw @a {"text":"Please keep in mind that this datapack uses custom world gen
 # create spawn platform
 schedule function a:zzzspawn 5t
 execute in the_nether run forceload add -13 -14 25 24
-place template a:lobbyoverworld1 -12 295 -14
+place template a:lobbyoverworld3v2 -12 294 -12
+fillbiome -11 298 -11 33 319 12 minecraft:cherry_grove
 setworldspawn 0 302 0
 spawnpoint @a 0 302 0
 tp @a 0 302 0
