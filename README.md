@@ -1,5 +1,5 @@
 # movement-simulator
-Minecraft Datapack for 1.21-1.21.5 (earlier versions may break due to Minecraft changing the NBT tags for naming) that spawns you into a random location in your world and has a worldborder chasing you!
+Minecraft Datapack for 1.21.9+ (earlier versions do not work due to the recent change https://minecraft.wiki/w/Noise_router#History) that spawns you into a random location in your world and has a worldborder chasing you!
 ### Important note:
 This datapack uses custom world generation. Specifically, it removes all water (as boating is boring) and replaces them with other biomes. To use this datapack, the world files must be completely wiped or a new world must be created with this datapack in the datapacks folder.
 
@@ -14,10 +14,9 @@ Bonuses include better food, a speed potion, an extra pearl, and general upgrade
 
 
 ## More technical stuff that is mostly for myself:
-Players are floated above spawn to let them get a good look at their surroundings. They can technically pearl during this range, and I think this is fair game. <br>
+Players are floated above spawn to let them get a good look at their surroundings. They cannot pearl during this time, it immediately gets deleted. <br>
 The border starts damaging players when they are 50 blocks away from the front of the border and damages half a heart, no matter the range the player is from the front of the border. When the player dies, their distance in blocks from the target block is shown in chat. <br>
-When the border is just 20 blocks wide, it closes at a much slower rate to allow players to orient themselves onto the correct final block and for stragglers to quickly make it in. The border will finally close onto one specific block, ending the round and displaying in chat everyone who survived. <br>
-The datapack should theoretically be multiplayer compatible, but I have not tested this.
+When the border is just 10 blocks wide, it closes at a much slower rate to allow players to orient themselves onto the correct final block and for stragglers to quickly make it in. The border will finally close onto one specific block, ending the round and displaying in chat everyone who survived. <br>
 
 ## Bugs and todo:
-Write more information on what to do to start the round + what to do when the round ends
+players can pearl at the 4/5 i think
