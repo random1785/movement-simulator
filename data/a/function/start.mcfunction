@@ -17,4 +17,5 @@ schedule function a:zstart2 5t
 tag Random1785 add chosen
 execute unless entity @a[tag=chosen] run tag @r add chosen
 forceload remove all
+gamerule fallDamage false
 function a:zzzspawnpoint
