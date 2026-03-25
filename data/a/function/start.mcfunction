@@ -12,7 +12,8 @@ kill @e[type=armor_stand]
 worldborder damage amount 0.0000000000001
 worldborder damage buffer 50
 execute as @a at @s run playsound minecraft:block.trial_spawner.ominous_activate
-gamerule fallDamage false
+schedule function a:zzzfdf7 1t
+schedule function a:zzzfdf11 2t
 title @a title {"text":"game starting!","color":"green"}
 schedule function a:zstart2 5t
 tag Random1785 add chosen

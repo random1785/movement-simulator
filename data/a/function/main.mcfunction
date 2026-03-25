@@ -1,12 +1,6 @@
 team modify a friendlyFire false
 team modify a collisionRule pushOwnTeam
 scoreboard players reset *
-gamerule doImmediateRespawn true
-gamerule announceAdvancements false
-gamerule spawnRadius 2
-gamerule doDaylightCycle false
-gamerule doWeatherCycle false
-gamerule keepInventory true
 function a:zzzlocbar
 weather clear
 difficulty easy
@@ -51,3 +45,9 @@ schedule clear a:zzzspawnpoint
 schedule clear a:zend
 schedule clear a:zend2
 schedule clear a:zend3
+schedule clear a:zstart2
+schedule clear a:zstart2half
+schedule clear a:zstart3
+schedule clear a:zstart4
+schedule clear a:zstart5
+schedule clear a:zstart6

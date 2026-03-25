@@ -19,4 +19,4 @@ The border starts damaging players when they are 50 blocks away from the front o
 When the border is just 10 blocks wide, it closes at a much slower rate to allow players to orient themselves onto the correct final block and for stragglers to quickly make it in. The border will finally close onto one specific block, ending the round and displaying in chat everyone who survived. <br>
 
 ## Bugs and todo:
-players can pearl at the 4/5 i think
+players can pearl at the 4/5 i think actually this doesnt really matter they get teleported soooooo js their problem
