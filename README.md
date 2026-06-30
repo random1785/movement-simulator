@@ -22,3 +22,4 @@ The datapack is multiplayer compatible!!! Very epic
 ## Bugs and todo:
 players who join mid round!!!
 nerf spawn rates of "easy" biomes e.g. plains, snowy plains, desert...
+add the new spawn lmao
