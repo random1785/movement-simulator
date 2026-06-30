@@ -20,3 +20,4 @@ When the border is just 20 blocks wide, it closes at a much slower rate to allow
 The datapack is multiplayer compatible!!! Very epic
 
 ## Bugs and todo:
+players who join mid round!!!
