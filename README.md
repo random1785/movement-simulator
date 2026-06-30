@@ -1,5 +1,5 @@
 # movement-simulator
-Minecraft Datapack for 1.21.5-1.21.8 (earlier versions may break due to Minecraft changing the NBT tags for naming) that spawns you into a random location in your world and has a worldborder chasing you!
+Minecraft Datapack for 1.21.11-26.2 (earlier versions do not work.) that spawns you into a random location in your world and has a worldborder chasing you!
 ### Important note:
 This datapack uses custom world generation. Specifically, it removes all water (as boating is boring) and replaces them with other biomes. To use this datapack, the world files must be completely wiped or a new world must be created with this datapack in the datapacks folder.
 
@@ -21,3 +21,4 @@ The datapack is multiplayer compatible!!! Very epic
 
 ## Bugs and todo:
 players who join mid round!!!
+nerf spawn rates of "easy" biomes e.g. plains, snowy plains, desert...
