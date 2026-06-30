@@ -2508,5 +2508,6 @@ execute as @a[scores={death=2,poffset=6245002..6250000},tag=!b] run tellraw @a [
 
 
 execute as @a[scores={death=2,poffset=6250001..},tag=!b] run tellraw @a [{"color":"red","selector":"@s"},{"text":" died "},{"score":{"name":"@s","objective":"forward"}},{"text":" blocks out."}]
+execute as @a[scores={death=2},tag=!b] run tellraw @s {"color":"gray","text":"Please remember to NOT SPOIL THE TERRAIN for other players."}
 clear @a[scores={death=2},tag=!b]
 tag @a[scores={death=2},tag=!b] add b

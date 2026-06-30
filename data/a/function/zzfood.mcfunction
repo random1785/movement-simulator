@@ -1,1 +1,1 @@
-give @a golden_carrot 16
+give @a[tag=!spec] golden_carrot 16

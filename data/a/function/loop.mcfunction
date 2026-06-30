@@ -8,9 +8,26 @@ execute in minecraft:the_nether positioned 11.08 159.00 4.82 run tp @e[type=ende
 execute in minecraft:the_nether positioned 11.08 159.00 4.82 run tag @e[type=enderman,distance=..60,tag=!end] add end
 
 
+execute as @a[scores={spec=1..}] run tellraw @a [{"color":"gray","selector":"@s"},{"text":" has become a spectator."}]
+execute as @a[scores={spec=1..}] run gamemode spectator @s
+execute as @a[scores={spec=1..}] run tag @s add spec
+execute as @a[scores={spec=1..}] run scoreboard players set @s spec -1785
+
+execute as @a[scores={notspec=1..}] run tellraw @a [{"color":"green","selector":"@s"},{"text":" has stopped being a spectator."}]
+execute as @a[scores={notspec=1..}] run scoreboard players reset @s spec
+execute as @a[scores={notspec=1..}] run tp @s 0 302 0
+execute as @a[scores={notspec=1..}] run gamemode survival @s
+execute as @a[scores={notspec=1..}] run tag @s remove spec
+execute as @a[scores={notspec=1..}] run scoreboard players reset @s notspec
+
+execute unless entity @e[limit=1,tag=score,scores={round=1}] positioned 12.79 308.35 0.70 run scoreboard players enable @a[distance=..30] spec
+execute unless entity @e[limit=1,tag=score,scores={round=1}] positioned 12.79 308.35 0.70 run scoreboard players enable @a[distance=..30] notspec
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run scoreboard players enable @a[distance=..60] notspec
+execute in minecraft:the_nether positioned 11.08 159.00 4.82 run scoreboard players enable @a[distance=..60] spec
 
 
-scoreboard players add @a[scores={death=1}] score 1
+scoreboard players add @a[scores={death=1,score=..10}] score 1
+scoreboard players add @a[scores={death=1786,score=..10}] score 1
 gamemode spectator @a[scores={death=2},tag=!b]
 execute as @a[scores={death=2},tag=!b] run function a:zzzpy
 

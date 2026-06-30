@@ -1,1 +1,1 @@
-give @a ender_pearl
+give @a[tag=!spec] ender_pearl

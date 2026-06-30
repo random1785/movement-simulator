@@ -19,3 +19,9 @@ execute as @e[type=armor_stand,tag=centre] run scoreboard players operation @s s
 execute as @e[type=armor_stand,tag=centre] run scoreboard players operation @s speeddec /= @s random
 execute as @e[type=armor_stand,tag=centre] run tellraw @a [{"color":"red","text":"Worldborder speed: "},{"bold":true,"score":{"name":"@s","objective":"speed"}},{"bold":true,"text":"."},{"bold":true,"score":{"name":"@s","objective":"speeddec"}},{"text":" blocks per second."}]
 schedule function a:zstart6 250t
+execute as @a run trigger spec add 0
+execute as @a run trigger notspec add 0
+
+gamemode spectator @a[scores={spec=-1785}]
+tellraw @a[scores={spec=-1785}] {"text":"Remember to NOT SPOIL THE TERRAIN FOR PLAYERS. Have fun spectating!","color":"gray"}
+scoreboard players set @a[scores={spec=-1785}] death 1786

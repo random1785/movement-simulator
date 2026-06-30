@@ -1,7 +1,7 @@
 team modify a friendlyFire false
 team modify a collisionRule pushOwnTeam
 scoreboard players reset *
-function a:zzzlocbar
+function a:maingmr11
 weather clear
 difficulty easy
 time set 0
@@ -20,7 +20,10 @@ scoreboard objectives add k dummy
 scoreboard objectives add bonus dummy
 scoreboard objectives add day dummy
 scoreboard objectives add death deathCount
+scoreboard objectives add spec trigger
+scoreboard objectives add surv dummy
 scoreboard objectives add pearl minecraft.used:minecraft.ender_pearl
+scoreboard objectives setdisplay sidebar
 tellraw @a {"text":"Movement simulator has been loaded! Use /function a:start to begin!","color":"aqua"}
 tellraw @a {"text":"Please keep in mind that this datapack uses custom world generation. For this to take effect, you must delete all world files and regenerate the world with this datapack in the datapack folder.","color":"blue"}
 
@@ -51,3 +54,15 @@ schedule clear a:zstart3
 schedule clear a:zstart4
 schedule clear a:zstart5
 schedule clear a:zstart6
+
+
+advancement grant @a only minecraft:end/levitate
+stopsound @a * minecraft:ui.toast.challenge_complete
+
+
+scoreboard objectives add spec trigger
+scoreboard objectives add notspec trigger
+scoreboard players enable @a spec
+scoreboard players enable @a notspec
+
+tag @a remove spec
